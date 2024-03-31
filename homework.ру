@@ -1,4 +1,4 @@
-array = [int(x) for x in input("Введите целые числа в любом порядке, через пробел: ").split()]
+array = [int(x) for x in input("Введите целые положительные числа в любом порядке, через пробел: ").split()]
 
 def merge_sort(array):
     if len(array) < 2:
@@ -35,9 +35,9 @@ print(merge_sort(array))
 
 while True:
     try:
-        element = int(input("Введите любое положительное целое число из полученного списка: "))
+        element = int(input("Введите любое число из полученного списка: "))
         if element < min(array) or element > max(array):
-            print("Указанное число не входит в диапазон списка!")
+            print("Указанное число не из списка !")
         if element <= 0:
             raise Exception
         break
