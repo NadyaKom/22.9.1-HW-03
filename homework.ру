@@ -35,10 +35,10 @@ print(merge_sort(array))
 
 while True:
     try:
-        element = int(input("Введите любое число из полученного списка: "))
-        if element < min(array) or element > max(array):
+        number = int(input("Введите любое число из полученного списка: "))
+        if number < min(array) or number > max(array):
             print("Указанное число не из списка !")
-        if element <= 0:
+        if number <= 0:
             raise Exception
         break
     except ValueError:
@@ -50,11 +50,11 @@ def binary_search(array, element, left, right):
     if left > right:
         return False
     middle = (right + left) // 2
-    if array[middle] == element:
+    if array[middle] == number:
         return middle
-    elif element < array[middle]:
-        return binary_search(array, element, left, middle - 1)
+    elif number < array[middle]:
+        return binary_search(array, number, left, middle - 1)
     else:
-        return binary_search(array, element, middle + 1, right)
+        return binary_search(array, number, middle + 1, right)
 
-print(binary_search(array, element, 0, len(array) - 1)) 
+print(binary_search(array, number, 0, len(array) - 1)) 
